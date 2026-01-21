@@ -110,12 +110,6 @@ This script will:
 
 ---
 
-## 📜 License
-
-MIT License – feel free to use, modify, and distribute.
-
----
-
 ## 🙌 Acknowledgements
 
 - [Qwen Team](https://qwenlm.github.io/) for the powerful Qwen3-VL models
