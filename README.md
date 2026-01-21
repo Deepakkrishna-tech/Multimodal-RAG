@@ -94,12 +94,51 @@ This script will:
 
 ---
 
-## 🔍Applications or UseCases
-Usecase-1
-One strong production use case for this architecture is enterprise document intelligence where images are first class citizens. Think of domains like insurance claims, medical records, aerospace maintenance logs, or compliance audits. In these systems, a large portion of knowledge lives inside scanned documents, photos, diagrams, X rays, handwritten notes, or equipment images. This architecture allows every image to be ingested, semantically understood by a vision language model, embedded into a multimodal vector space, and stored with rich metadata in Qdrant. When a user asks a question such as “show similar past claims with visible structural damage” or “find reports that contain wiring issues like this image,” the system can retrieve relevant historical cases using both textual intent and visual similarity. The language model then reasons over the retrieved context to generate grounded explanations or summaries. In production, this reduces manual review time, improves decision consistency, and enables search over visual evidence that was previously inaccessible to traditional text only RAG systems.
+## 🔍 Applications & Use Cases
 
-UseCase-2
-Another production grade use case is multimodal knowledge assistants for engineering and manufacturing workflows. In industries like aerospace, automotive, and industrial manufacturing, engineers constantly work with schematics, component images, failure photos, and inspection visuals alongside technical documentation. With this architecture, images from inspections or design reviews are ingested and embedded along with their generated descriptions. Engineers can query the system using natural language such as “find past issues similar to this crack pattern” or “retrieve components visually similar to this assembly with known failures.” The multivector search uses one modality to narrow down candidates and another to precisely rank results, which is critical at scale. The retrieved context is then passed to the language model to explain root causes, suggest corrective actions, or summarize historical patterns. In real production environments, this leads to faster troubleshooting, better knowledge reuse, and a single assistant that understands both what engineers see and what they ask.
+### **Use Case 1: Enterprise Document Intelligence**
+
+A strong production use case for this architecture is **enterprise document intelligence**, where images are first-class citizens. Think of domains like **insurance claims**, **medical records**, **aerospace maintenance logs**, or **compliance audits**. In these systems, a large portion of knowledge lives inside **scanned documents, photos, diagrams, X-rays, handwritten notes, or equipment images**.
+
+This architecture allows every image to be:
+- Ingested and semantically understood by a vision-language model,
+- Embedded into a unified multimodal vector space,
+- Stored with rich metadata in Qdrant.
+
+When a user asks:  
+> *“Show similar past claims with visible structural damage”*  
+or  
+> *“Find reports that contain wiring issues like this image,”*  
+
+the system retrieves relevant historical cases using **both textual intent and visual similarity**. The language model then reasons over the retrieved context to generate **grounded explanations or summaries**.
+
+✅ **Production Impact**:  
+- Reduces manual review time  
+- Improves decision consistency  
+- Enables search over visual evidence previously inaccessible to text-only RAG
+
+---
+
+### **Use Case 2: Multimodal Knowledge Assistants for Engineering & Manufacturing**
+
+In industries like **aerospace**, **automotive**, and **industrial manufacturing**, engineers constantly work with **schematics, component images, failure photos, and inspection visuals** alongside technical documentation.
+
+With this architecture:
+- Images from inspections or design reviews are ingested and embedded along with their AI-generated descriptions.
+- Engineers can query using natural language:  
+  > *“Find past issues similar to this crack pattern”*  
+  or  
+  > *“Retrieve components visually similar to this assembly with known failures.”*
+
+The **multi-vector search** uses one modality (e.g., text) to narrow candidates and another (e.g., image) to precisely rank results—critical at enterprise scale. The retrieved context is passed to the language model to:
+- Explain root causes  
+- Suggest corrective actions  
+- Summarize historical failure patterns
+
+✅ **Production Impact**:  
+- Faster troubleshooting  
+- Better reuse of tacit visual knowledge  
+- A single assistant that understands **both what engineers see and what they ask**
 
 ---
 
@@ -114,7 +153,10 @@ Another production grade use case is multimodal knowledge assistants for enginee
 
 ## 🙌 Acknowledgements
 
-- [Qwen Team](https://qwenlm.github.io/) for the powerful Qwen3-VL models
-- [Qdrant](https://qdrant.tech/) for efficient multi-vector support
-- [RunPod](https://runpod.io/) for seamless GPU inference hosting
+- [Qwen Team](https://qwenlm.github.io/) for the powerful Qwen3-VL models  
+- [Qdrant](https://qdrant.tech/) for efficient multi-vector support  
+- [RunPod](https://runpod.io/) for seamless GPU inference hosting  
 
+---
+
+> ✨ **Multimodal RAG isn’t just about adding images—it’s about unifying perception and language.**
